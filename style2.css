@@ -1,0 +1,152 @@
+body {
+  /* background-color: #000000; */
+  background-image: linear-gradient(
+    to right,
+    #07d4eb,
+    #00d5dd,
+    #00d6c9,
+    #00d5b0,
+    #00d394,
+    #39d17a,
+    #57cd5f,
+    #71c940,
+    #95c324,
+    #b4bb03,
+    #d0b200,
+    #eaa707
+  );
+  color: #ffffff;
+}
+.container {
+  position: relative;
+}
+
+div.game {
+  width: 450px;
+  height: 140px;
+  margin: 10px;
+  position: relative;
+  /* background-color: #008; */
+}
+
+div.tower {
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  /* background-color: #0000f0; */
+}
+
+div.disk,
+div.bottom {
+  text-align: center;
+}
+
+.game {
+  font-size: 0;
+  /* background-color: #a0a0a0 !important; */
+  border-radius: 10px 10px 0px 0px;
+  border-bottom-style: ridge;
+  border-width: 5px;
+
+  /* box-shadow: 7px 7px 3px #505050; */
+}
+
+.tower {
+  z-index: 0;
+  /* background-color: rgba(0, 255, 255, 0.1) !important; */
+}
+
+#t1 {
+  left: 10px;
+}
+
+#t2 {
+  left: 175px;
+}
+
+#t3 {
+  left: 330px;
+}
+
+.disk {
+  height: 20px;
+  box-shadow: 15px 3px 7px #606060;
+}
+
+.disk,
+.bottom {
+  font-size: 0px;
+}
+
+#s2 {
+  width: 30px;
+  margin-left: 35px;
+  background-color: #ffff00;
+}
+
+#s3 {
+  width: 50px;
+  margin-left: 25px;
+  background-color: #ff4000;
+}
+
+#s4 {
+  width: 70px;
+  margin-left: 15px;
+  background-color: #ff00ff;
+}
+
+/*#s5 {
+    width: 90px;
+    margin-left: 5px;
+    background-color: #40ff00;
+  } */
+
+#s1 {
+  width: 20px;
+  margin-left: 40px;
+  background-color: grey;
+}
+
+div.bottom {
+  height: 150px;
+  width: 10px;
+  border-radius: 3px;
+  position: absolute;
+  left: 45px;
+  bottom: 0px;
+  background-color: black;
+  z-index: -1;
+}
+
+.timer {
+  text-align: center;
+}
+#time {
+  color: green;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.winorloose {
+  display: none;
+}
+
+#resetbtnbtn {
+  display: inline-block;
+}
+
+#nextLevelbtn {
+  background-color: rgb(20, 201, 20);
+  text-decoration: none;
+  border-radius: 5px;
+}
