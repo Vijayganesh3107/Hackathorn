@@ -125,6 +125,7 @@ div.bottom {
 }
 .winorloose {
   display: none;
+  font-size: 50px !important;
 }
 
 #resetbtnbtn {
@@ -163,6 +164,12 @@ div.bottom {
   #t3 {
     left: 190px;
   }
+
+  .head-div {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 5px;
+  }
 }
 
 @media (min-width: 320px) {
@@ -189,6 +196,12 @@ div.bottom {
 
   #t3 {
     left: 220px;
+  }
+
+  .head-div {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 5px;
   }
 }
 
@@ -219,6 +232,11 @@ div.bottom {
   #t3 {
     left: 290px;
   }
+  .head-div {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 130px;
+  }
 }
 @media (min-width: 590px) {
   .container {
@@ -247,6 +265,11 @@ div.bottom {
   #t3 {
     left: 330px;
   }
+  .head-div {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 130px;
+  }
 }
 @media (min-width: 734px) {
   .container {
@@ -273,6 +296,11 @@ div.bottom {
 
   #t3 {
     left: 330px;
+  }
+  .head-div {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 130px;
   }
 }
 @media (min-width: 845px) {
@@ -301,6 +329,11 @@ div.bottom {
   #t3 {
     left: 330px;
   }
+  .head-div {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 130px;
+  }
 }
 @media (min-width: 1025px) {
   .container {
@@ -327,6 +360,11 @@ div.bottom {
 
   #t3 {
     left: 330px;
+  }
+  .head-div {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 130px;
   }
 }
 @media (min-width: 1281px) {
@@ -355,4 +393,23 @@ div.bottom {
   #t3 {
     left: 330px;
   }
+
+  .head-div {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 130px;
+  }
+}
+.head-div {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.p-head {
+  font-size: 40px;
+  color: chocolate;
+}
+
+.homebtn {
+  background-color: rgb(6, 196, 243);
+  border-radius: 5px;
 }

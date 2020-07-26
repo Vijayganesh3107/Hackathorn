@@ -2,6 +2,15 @@ var container = document.createElement("div");
 container.setAttribute("class", "container");
 var body1 = document.createElement("div");
 body1.setAttribute("class", "body");
+var divhead = document.createElement("div");
+divhead.setAttribute("class", "head-div");
+var headp = document.createElement("p");
+headp.setAttribute("class", "p-head");
+var bold_1 = document.createElement("b");
+bold_1.innerHTML = "Level - 2";
+headp.appendChild(bold_1);
+divhead.appendChild(headp);
+container.appendChild(divhead);
 var div1 = document.createElement("div");
 var windiv = document.createElement("div");
 windiv.setAttribute("class", "win");
@@ -119,12 +128,14 @@ function init() {
 
           var btn1 = document.getElementById("buttons");
 
-          var nextLevelbtn = document.createElement("a");
+          var nextLevelbtn = document.createElement("button");
           nextLevelbtn.setAttribute("id", "nextLevelbtn");
           nextLevelbtn.innerHTML = "NextLevel";
-          nextLevelbtn.href = "index2.html";
-          nextLevelbtn.style.marginTop = "10px";
-          btn1.appendChild(nextLevelbtn);
+          nextLevelbtn.addEventListener("click", () => {
+            location.href = "index3.html";
+          });
+          nextLevelbtn.style.marginLeft = "10px";
+          btn1.append(nextLevelbtn);
           if (btn1.children.length > 2) {
             btn1.children[2 + cnt].style.display = "none";
             cnt++;
@@ -137,7 +148,7 @@ function init() {
             document.getElementById("time").innerHTML = array[i];
           }
 
-          if (i >= 40) {
+          if (i >= 5) {
             var timer = document.getElementById("time");
             timer.style.color = "red";
             timer.classList = " blink_me";
@@ -158,7 +169,7 @@ function init() {
     }
   }
 
-  timer(60, TimerLogic);
+  timer(10, TimerLogic);
 }
 
 function dragstart(ev) {
@@ -200,14 +211,24 @@ var btn = document.querySelector(".btn");
 var resetbtn = document.createElement("button");
 resetbtn.setAttribute("id", "resetbtn");
 resetbtn.innerHTML = "Reset";
-btn.style.width = "10px";
+resetbtn.style.color = "white";
+
 resetbtn.addEventListener("click", () => {
-  location.href = "index2.html";
+  location.href = "index1.html";
 });
 resetbtn.style.backgroundColor = "red";
-resetbtn.style.textDecoration = "none";
 resetbtn.style.borderRadius = "5px";
-btn.appendChild(resetbtn);
+btn.append(resetbtn);
+var homebtn = document.createElement("button");
+homebtn.setAttribute("class", "homebtn");
+homebtn.innerHTML = "Home";
+homebtn.style.color = "white";
+homebtn.style.marginLeft = "10px";
+homebtn.addEventListener("click", () => {
+  location.href = "index.html";
+});
+var hoembutton = document.getElementById("buttons");
+hoembutton.append(homebtn);
 init();
 
 function winorlost(towers) {

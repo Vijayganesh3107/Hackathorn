@@ -2,6 +2,15 @@ var container = document.createElement("div");
 container.setAttribute("class", "container");
 var body1 = document.createElement("div");
 body1.setAttribute("class", "body");
+var divhead = document.createElement("div");
+divhead.setAttribute("class", "head-div");
+var headp = document.createElement("p");
+headp.setAttribute("class", "p-head");
+var bold_1 = document.createElement("b");
+bold_1.innerHTML = "Level - 1";
+headp.appendChild(bold_1);
+divhead.appendChild(headp);
+container.appendChild(divhead);
 var div1 = document.createElement("div");
 var windiv = document.createElement("div");
 windiv.setAttribute("class", "win");
@@ -106,25 +115,25 @@ function init() {
           let winorlose = document.querySelector(".winorlose");
           winorlose.innerHTML = "Won the game";
           winorlose.style.color = "green";
-          winorlose.style.fontSize = "35px";
+          winorlose.style.fontSize = "50px";
           var gamediv1 = document.querySelector(".game");
           gamediv1.style.display = "none";
           let timersuccess = document.getElementById("time");
           timersuccess.innerHTML = `Completed`;
+          timersuccess.classList.add("blink_me");
 
           var btn1 = document.getElementById("buttons");
-          var span = document.createElement("span");
+          // var span = document.createElement("span");
 
           var nextLevelbtn = document.createElement("button");
           nextLevelbtn.setAttribute("id", "nextLevelbtn");
           nextLevelbtn.innerHTML = "NextLevel";
           nextLevelbtn.style.display = "inline-block";
-          nextLevelbtn.style.marginTop = "10px";
+          nextLevelbtn.style.marginLeft = "10px";
           nextLevelbtn.addEventListener("click", () => {
             location.href = "index2.html";
           });
-          span.appendChild(nextLevelbtn);
-          btn1.appendChild(span);
+          btn1.append(nextLevelbtn);
           if (btn1.children.length > 2) {
             btn1.children[2 + cnt].style.display = "none";
             // btn1.childNodes[2 + cnt].removeChild(btn1.childNodes[2 + cnt]);
@@ -200,16 +209,24 @@ var btn = document.querySelector(".btn");
 var resetbtn = document.createElement("button");
 resetbtn.setAttribute("id", "resetbtn");
 resetbtn.innerHTML = "Reset";
-btn.style.width = "10px";
+resetbtn.style.color = "white";
+
 resetbtn.addEventListener("click", () => {
   location.href = "index1.html";
 });
 resetbtn.style.backgroundColor = "red";
-resetbtn.style.textDecoration = "none";
 resetbtn.style.borderRadius = "5px";
-var span1 = document.createElement("span");
-span1.appendChild(resetbtn);
-btn.appendChild(span1);
+btn.append(resetbtn);
+var homebtn = document.createElement("button");
+homebtn.setAttribute("class", "homebtn");
+homebtn.innerHTML = "Home";
+homebtn.style.color = "white";
+homebtn.style.marginLeft = "10px";
+homebtn.addEventListener("click", () => {
+  location.href = "index.html";
+});
+var hoembutton = document.getElementById("buttons");
+hoembutton.append(homebtn);
 
 init();
 

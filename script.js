@@ -26,6 +26,30 @@ var li3 = document.createElement("li");
 li3.innerHTML =
   "You are not allowed to put a bigger disk on top of a smaller one.";
 ul.appendChild(li3);
+var b = document.createElement("b");
+b.innerHTML = "60 Seconds";
+b.style.color = "black";
+var li4 = document.createElement("li");
+li4.innerHTML = "In order to win the Level1 you need to solve the problem in ";
+li4.appendChild(b);
+ul.appendChild(li4);
+var b1 = document.createElement("b");
+b1.innerHTML = "90 Seconds";
+b1.style.color = "black";
+var li5 = document.createElement("li");
+li5.innerHTML = "In order to win the Level2 you need to solve the problem in ";
+li5.appendChild(b1);
+
+ul.appendChild(li5);
+
+var b2 = document.createElement("b");
+b2.innerHTML = "120 Seconds";
+b2.style.color = "black";
+var li6 = document.createElement("li");
+li6.innerHTML = "In order to win the Level2 you need to solve the problem in ";
+li6.appendChild(b2);
+ul.appendChild(li6);
+
 container.appendChild(ul);
 document.body.appendChild(container);
 
