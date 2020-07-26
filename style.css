@@ -25,10 +25,18 @@ h2 {
   text-align: justify !important;
   margin-top: 50px;
   text-decoration: underline;
+  color: wheat;
+  margin-left: 30px;
 }
 
 ul {
   text-align: justify !important;
+  color: wheat;
+  margin-left: 30px;
+}
+h1 {
+  font-size: 45px;
+  color: Tomato;
 }
 
 #level1,
