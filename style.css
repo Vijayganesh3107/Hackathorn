@@ -1,0 +1,39 @@
+body {
+  background-image: linear-gradient(
+    to right,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  font-family: "Recursive", sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+.img-container {
+  text-align: center;
+}
+
+.img-container img {
+  max-width: 30%;
+}
+
+h2 {
+  text-align: justify !important;
+  margin-top: 50px;
+  text-decoration: underline;
+}
+
+ul {
+  text-align: justify !important;
+}
+
+#level1,
+#level2,
+#level3 {
+  background-color: rgb(20, 201, 20);
+  margin-left: 40px;
+}

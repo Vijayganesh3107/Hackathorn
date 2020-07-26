@@ -1,5 +1,4 @@
 body {
-  /* background-color: #000000; */
   background-image: linear-gradient(
     to right,
     #07d4eb,
@@ -16,9 +15,13 @@ body {
     #eaa707
   );
   color: #ffffff;
+  font-family: "Recursive", sans-serif;
 }
 .container {
   position: relative;
+  margin-top: 130px;
+  bottom: 30%;
+  left: 30%;
 }
 
 div.game {
@@ -26,14 +29,12 @@ div.game {
   height: 140px;
   margin: 10px;
   position: relative;
-  /* background-color: #008; */
 }
 
 div.tower {
   width: 100px;
   position: absolute;
   bottom: 0px;
-  /* background-color: #0000f0; */
 }
 
 div.disk,
@@ -43,17 +44,14 @@ div.bottom {
 
 .game {
   font-size: 0;
-  /* background-color: #a0a0a0 !important; */
+
   border-radius: 10px 10px 0px 0px;
   border-bottom-style: ridge;
   border-width: 5px;
-
-  /* box-shadow: 7px 7px 3px #505050; */
 }
 
 .tower {
   z-index: 0;
-  /* background-color: rgba(0, 255, 255, 0.1) !important; */
 }
 
 #t1 {
@@ -89,18 +87,6 @@ div.bottom {
   margin-left: 25px;
   background-color: #ff4000;
 }
-
-/*#s4 {
-  width: 70px;
-  margin-left: 15px;
-  background-color: #ff00ff;
-}
-
-#s5 {
-  width: 90px;
-  margin-left: 5px;
-  background-color: #40ff00;
-} */
 
 #s1 {
   width: 20px;
@@ -149,4 +135,224 @@ div.bottom {
   background-color: rgb(20, 201, 20);
   text-decoration: none;
   border-radius: 5px;
+  display: inline-block;
+}
+
+@media (min-width: 268px) {
+  .container {
+    position: relative;
+    margin-top: 10px;
+    bottom: 0%;
+    left: 0%;
+  }
+  div.game {
+    width: 250px;
+    height: 140px;
+    margin: 10px;
+    position: relative;
+  }
+
+  #t1 {
+    left: -30px;
+  }
+
+  #t2 {
+    left: 80px;
+  }
+
+  #t3 {
+    left: 190px;
+  }
+}
+
+@media (min-width: 320px) {
+  .container {
+    position: relative;
+    margin-top: 10px;
+    bottom: 0%;
+    left: 0%;
+  }
+  div.game {
+    width: 300px;
+    height: 140px;
+    margin: 10px;
+    position: relative;
+  }
+
+  #t1 {
+    left: -20px;
+  }
+
+  #t2 {
+    left: 100px;
+  }
+
+  #t3 {
+    left: 220px;
+  }
+}
+
+@media (min-width: 432px) {
+  .container {
+    position: relative;
+    margin-top: 70px;
+    margin-left: 60px;
+    bottom: 30%;
+    left: 0%;
+  }
+
+  div.game {
+    width: 350px;
+    height: 140px;
+    margin: 10px;
+    position: relative;
+  }
+
+  #t1 {
+    left: -20px;
+  }
+
+  #t2 {
+    left: 125px;
+  }
+
+  #t3 {
+    left: 290px;
+  }
+}
+@media (min-width: 590px) {
+  .container {
+    position: relative;
+    margin-top: 140px;
+    margin-left: 120px;
+    bottom: 30%;
+    left: 0%;
+  }
+
+  div.game {
+    width: 450px;
+    height: 140px;
+    margin: 10px;
+    position: relative;
+  }
+
+  #t1 {
+    left: 10px;
+  }
+
+  #t2 {
+    left: 175px;
+  }
+
+  #t3 {
+    left: 330px;
+  }
+}
+@media (min-width: 734px) {
+  .container {
+    position: relative;
+    margin-top: 130px;
+    bottom: 50%;
+    left: 20%;
+  }
+
+  div.game {
+    width: 450px;
+    height: 140px;
+    margin: 10px;
+    position: relative;
+  }
+
+  #t1 {
+    left: 10px;
+  }
+
+  #t2 {
+    left: 175px;
+  }
+
+  #t3 {
+    left: 330px;
+  }
+}
+@media (min-width: 845px) {
+  .container {
+    position: relative;
+    margin-top: 130px;
+    bottom: 30%;
+    left: 30%;
+  }
+
+  div.game {
+    width: 450px;
+    height: 140px;
+    margin: 10px;
+    position: relative;
+  }
+
+  #t1 {
+    left: 10px;
+  }
+
+  #t2 {
+    left: 175px;
+  }
+
+  #t3 {
+    left: 330px;
+  }
+}
+@media (min-width: 1025px) {
+  .container {
+    position: relative;
+    margin-top: 130px;
+    bottom: 30%;
+    left: 30%;
+  }
+
+  div.game {
+    width: 450px;
+    height: 140px;
+    margin: 10px;
+    position: relative;
+  }
+
+  #t1 {
+    left: 10px;
+  }
+
+  #t2 {
+    left: 175px;
+  }
+
+  #t3 {
+    left: 330px;
+  }
+}
+@media (min-width: 1281px) {
+  .container {
+    position: relative;
+    margin-top: 130px;
+    bottom: 30%;
+    left: 30%;
+  }
+
+  div.game {
+    width: 450px;
+    height: 140px;
+    margin: 10px;
+    position: relative;
+  }
+
+  #t1 {
+    left: 10px;
+  }
+
+  #t2 {
+    left: 175px;
+  }
+
+  #t3 {
+    left: 330px;
+  }
 }

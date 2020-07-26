@@ -1,3 +1,85 @@
+var container = document.createElement("div");
+container.setAttribute("class", "container");
+var body1 = document.createElement("div");
+body1.setAttribute("class", "body");
+var div1 = document.createElement("div");
+var windiv = document.createElement("div");
+windiv.setAttribute("class", "win");
+var h2winorloose = document.createElement("h2");
+h2winorloose.setAttribute("class", "winorlose");
+windiv.appendChild(h2winorloose);
+div1.appendChild(windiv);
+var timerdiv = document.createElement("div");
+timerdiv.setAttribute("class", "timer");
+var span = document.createElement("span");
+span.innerHTML = "Time Left:";
+timerdiv.appendChild(span);
+var timep = document.createElement("p");
+timep.setAttribute("id", "time");
+timerdiv.appendChild(timep);
+div1.appendChild(timerdiv);
+var divgame = document.createElement("div");
+divgame.setAttribute("class", "game");
+var tower1div = document.createElement("div");
+tower1div.setAttribute("class", "tower");
+tower1div.setAttribute("id", "t1");
+var disk1div = document.createElement("div");
+disk1div.setAttribute("class", "disk");
+disk1div.setAttribute("id", "s1");
+tower1div.appendChild(disk1div);
+var disk2div = document.createElement("div");
+disk2div.setAttribute("class", "disk");
+disk2div.setAttribute("id", "s2");
+tower1div.appendChild(disk2div);
+var disk3div = document.createElement("div");
+disk3div.setAttribute("class", "disk");
+disk3div.setAttribute("id", "s3");
+tower1div.appendChild(disk3div);
+var disk4div = document.createElement("div");
+disk4div.setAttribute("class", "disk");
+disk4div.setAttribute("id", "s4");
+tower1div.appendChild(disk4div);
+var disk5div = document.createElement("div");
+disk5div.setAttribute("class", "disk");
+disk5div.setAttribute("id", "s5");
+tower1div.appendChild(disk5div);
+var bottomdiv = document.createElement("div");
+bottomdiv.setAttribute("class", "bottom");
+bottomdiv.setAttribute("id", "z1");
+tower1div.appendChild(bottomdiv);
+divgame.appendChild(tower1div);
+
+var tower2div = document.createElement("div");
+tower2div.setAttribute("class", "tower");
+tower2div.setAttribute("id", "t2");
+
+var bottomdiv1 = document.createElement("div");
+bottomdiv1.setAttribute("class", "bottom");
+bottomdiv1.setAttribute("id", "z2");
+tower2div.appendChild(bottomdiv1);
+divgame.appendChild(tower2div);
+
+var tower3div = document.createElement("div");
+tower3div.setAttribute("class", "tower");
+tower3div.setAttribute("id", "t3");
+
+var bottomdiv2 = document.createElement("div");
+bottomdiv2.setAttribute("class", "bottom");
+bottomdiv2.setAttribute("id", "z3");
+tower3div.appendChild(bottomdiv2);
+divgame.appendChild(tower3div);
+
+div1.appendChild(divgame);
+
+body1.appendChild(div1);
+container.appendChild(body1);
+
+var btndiv = document.createElement("div");
+btndiv.setAttribute("class", "btn");
+btndiv.setAttribute("id", "buttons");
+container.appendChild(btndiv);
+document.body.appendChild(container);
+
 var disks, towers, draggedone;
 var cnt = 0;
 
@@ -32,22 +114,20 @@ function init() {
           let winorlose = document.querySelector(".winorlose");
           winorlose.innerHTML = "Sucessfully Completed All the Levels";
           winorlose.style.color = "green";
-          winorlose.style.fontSize = "30px";
+          winorlose.style.fontSize = "35px";
           var gamediv1 = document.querySelector(".game");
           gamediv1.style.display = "none";
           let timersuccess = document.getElementById("time");
           timersuccess.innerHTML = `Completed`;
           timersuccess.style.color = "green";
 
-          var btn1 = document.getElementById("buttons");
+          //   var btn1 = document.getElementById("buttons");
 
-          var nextLevelbtn = document.createElement("a");
-          nextLevelbtn.setAttribute("id", "nextLevelbtn");
+          //   var nextLevelbtn = document.createElement("a");
+          //   nextLevelbtn.setAttribute("id", "nextLevelbtn");
 
-          nextLevelbtn.href = "index3.html";
-          btn1.appendChild(nextLevelbtn);
-
-          //   clearTimeout(t);
+          //   nextLevelbtn.href = "index3.html";
+          //   btn1.appendChild(nextLevelbtn);
         } else {
           if (i != no)
             document.getElementById("time").innerHTML = array[i] + "sec";
@@ -55,7 +135,7 @@ function init() {
             document.getElementById("time").innerHTML = array[i];
           }
 
-          if (i >= 180) {
+          if (i >= 40) {
             var timer = document.getElementById("time");
             timer.style.color = "red";
             timer.classList = " blink_me";
@@ -63,10 +143,7 @@ function init() {
           }
 
           if (document.getElementById("time").innerHTML === "Time's Up") {
-            //   var btn = document.querySelector(".btn");
-            //   var solve_btn = document.createElement("button");
-            //   solve_btn.innerHTML = "Solve";
-            //   btn.appendChild(solve_btn);
+            winorloose = false;
             var gamediv = document.querySelector(".game");
             gamediv.style.display = "none";
             var winorlose = document.querySelector(".winorlose");
@@ -76,11 +153,10 @@ function init() {
           }
         }
       }, 1000 * i);
-      //   if (winorlost(towers, disks) === true) clearTimeout(t);
     }
   }
 
-  timer(200, TimerLogic);
+  timer(60, TimerLogic);
 }
 
 function dragstart(ev) {
@@ -91,7 +167,7 @@ function dragstart(ev) {
 function dragenter(ev) {
   var tower = ev.currentTarget;
   var disk = draggedone;
-  // get disks that are already on tower
+
   var disksOnTower = tower.getElementsByClassName("disk");
   if (disksOnTower.length == 0 || disksOnTower[0].id > disk) {
     tower.diskCanBeDroppedHere = true;
@@ -120,11 +196,13 @@ function drop(ev) {
   ev.preventDefault();
 }
 var btn = document.querySelector(".btn");
-var resetbtn = document.createElement("a");
+var resetbtn = document.createElement("button");
 resetbtn.setAttribute("id", "resetbtn");
 resetbtn.innerHTML = "Reset";
-btn.style.width = "10px";
-resetbtn.href = "index3.html";
+resetbtn.addEventListener("click", () => {
+  location.href = "index3.html";
+});
+// resetbtn.href = "index3.html";
 resetbtn.style.backgroundColor = "red";
 resetbtn.style.textDecoration = "none";
 resetbtn.style.borderRadius = "5px";
