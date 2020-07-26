@@ -136,8 +136,9 @@ function init() {
           });
           nextLevelbtn.style.marginLeft = "10px";
           btn1.append(nextLevelbtn);
-          if (btn1.children.length > 2) {
+          if (btn1.children.length > 3) {
             btn1.children[2 + cnt].style.display = "none";
+            // btn1.childNodes[2 + cnt].removeChild(btn1.childNodes[2 + cnt]);
             cnt++;
           }
           //   clearTimeout(t);

@@ -205,7 +205,7 @@ resetbtn.addEventListener("click", () => {
 });
 // resetbtn.href = "index3.html";
 resetbtn.style.backgroundColor = "red";
-resetbtn.style.textDecoration = "none";
+resetbtn.style.color = "white";
 resetbtn.style.borderRadius = "5px";
 btn.append(resetbtn);
 var homebtn = document.createElement("button");
