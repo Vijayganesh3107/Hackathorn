@@ -149,7 +149,7 @@ function init() {
             document.getElementById("time").innerHTML = array[i];
           }
 
-          if (i >= 5) {
+          if (i >= 70) {
             var timer = document.getElementById("time");
             timer.style.color = "red";
             timer.classList = " blink_me";
@@ -170,7 +170,7 @@ function init() {
     }
   }
 
-  timer(10, TimerLogic);
+  timer(90, TimerLogic);
 }
 
 function dragstart(ev) {
@@ -215,7 +215,7 @@ resetbtn.innerHTML = "Reset";
 resetbtn.style.color = "white";
 
 resetbtn.addEventListener("click", () => {
-  location.href = "index1.html";
+  location.href = "index2.html";
 });
 resetbtn.style.backgroundColor = "red";
 resetbtn.style.borderRadius = "5px";
